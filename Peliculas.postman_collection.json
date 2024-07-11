@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "e36b875b-de48-4f11-80dc-ba2dc7e1019a",
+		"name": "Peliculas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18250838"
+	},
+	"item": [
+		{
+			"name": "Obtener todo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pelis24115/movies?action=getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pelis24115",
+						"movies"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "getAll"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pelis24115/movies?action=getById&id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pelis24115",
+						"movies"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "getById"
+						},
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"nombre\": \"qa3\",\r\n        \"descripcion\": \"11122\",\r\n        \"genero\": \"qqq\",\r\n        \"calificacion\": 1,\r\n        \"anio\": 2024,\r\n        \"director\": \"yo\",\r\n        \"id\": 24\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pelis24115/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pelis24115",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "QA",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "genero",
+							"value": "drama",
+							"type": "text"
+						},
+						{
+							"key": "anio",
+							"value": "2024",
+							"type": "text"
+						},
+						{
+							"key": "director",
+							"value": "yo",
+							"type": "text"
+						},
+						{
+							"key": "calificacion",
+							"value": "8",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/pelis24115/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pelis24115",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pelis24115/movies?id=24",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pelis24115",
+						"movies"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "24"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
